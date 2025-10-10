@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import type { ListItem } from '@/models/app'
 import { onMounted, onUnmounted, onUpdated } from 'vue'
 
 const props = defineProps<{
-  itemText: string
+  itemText: ListItem
   isSelected: boolean
 }>()
 onMounted(() => {
@@ -18,7 +19,7 @@ onUnmounted(() => {
 
 <template>
   <li :class="{ selected: props.isSelected }">
-    {{ props.itemText }}
+    {{ props.itemText.text }}
   </li>
 </template>
 

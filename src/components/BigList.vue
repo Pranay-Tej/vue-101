@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import BigListItem from './BigListItem.vue'
-const items = ref(
+import type { ListItem } from '@/models/app'
+
+const items = ref<ListItem[]>(
   Array.from({ length: 100 }, (_, i) => {
     return {
       id: i,
@@ -18,9 +20,9 @@ const selectedItem = ref<number | null>(null)
     <BigListItem
       v-for="item in items"
       :key="item.id"
-      :itemText="item.text"
+      :itemText="item"
       :isSelected="item.id === selectedItem"
-      v-memo="[item.id === selectedItem]"
+      v-memo="[item, item.id === selectedItem]"
       @click="selectedItem = item.id"
     />
   </ul>
