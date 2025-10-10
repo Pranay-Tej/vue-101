@@ -19,6 +19,11 @@ const router = createRouter({
       name: 'crud',
       component: () => import('@/pages/ApiCrudPage/index.vue'),
     },
+    {
+      path: '/ui-elements',
+      name: 'ui-elements',
+      component: () => import('@/pages/UiElements.vue'),
+    },
   ],
 })
 
