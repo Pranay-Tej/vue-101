@@ -10,12 +10,14 @@
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
+    "start:api": "json-server db.json --port 3001",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "axios": "^1.12.2",
     "pinia": "^3.0.3",
     "vue": "^3.5.22",
     "vue-router": "^4.5.1"
@@ -30,6 +32,7 @@
     "eslint": "^9.33.0",
     "eslint-plugin-vue": "~10.4.0",
     "jiti": "^2.5.1",
+    "json-server": "1.0.0-beta.3",
     "npm-run-all2": "^8.0.4",
     "prettier": "3.6.2",
     "typescript": "~5.9.0",
