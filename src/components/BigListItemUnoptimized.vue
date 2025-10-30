@@ -6,10 +6,6 @@ const props = defineProps<{
   item: ListItem
   isSelected: boolean
 }>()
-const emits = defineEmits<{
-  (e: 'select', id: number): void
-}>()
-
 onMounted(() => {
   console.log('Mounted:', props.item)
 })
@@ -22,7 +18,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <li :class="{ selected: props.isSelected }" @click="emits('select', props.item.id)">
+  <li :class="{ selected: props.isSelected }">
     {{ props.item.text }}
   </li>
 </template>

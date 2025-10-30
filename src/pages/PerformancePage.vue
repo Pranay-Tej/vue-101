@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BigList from '@/components/BigList.vue'
+import BigListUnoptimized from '@/components/BigListUnoptimized.vue'
 import TheCounter from '@/components/TheCounter.vue'
 import TheInput from '@/components/TheInput.vue'
 import { ref } from 'vue'
@@ -20,8 +21,8 @@ const handleCountChange = (value: number) => {
     <h2>Two-way input</h2>
     <TheInput v-model="textValue" />
   </div>
-  <h2>Big list</h2>
   <BigList />
+  <BigListUnoptimized />
 </template>
 
 <style scoped>
