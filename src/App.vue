@@ -6,6 +6,7 @@
     <RouterLink to="/performance" active-class="active-link">Performance</RouterLink>
     <RouterLink to="/crud" active-class="active-link">CRUD</RouterLink>
     <RouterLink to="/ui-elements" active-class="active-link">UI Elements</RouterLink>
+    <RouterLink to="/global-state" active-class="active-link">Global Vanilla State</RouterLink>
   </nav>
 
   <RouterView />

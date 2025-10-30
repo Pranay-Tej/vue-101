@@ -24,6 +24,11 @@ const router = createRouter({
       name: 'ui-elements',
       component: () => import('@/pages/UiElements.vue'),
     },
+    {
+      path: '/global-state',
+      name: 'global-state',
+      component: () => import('@/pages/GlobalState/index.vue'),
+    },
   ],
 })
 
