@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import VanillaStoreAlpha from './VanillaStoreAlpha.vue'
-import VanillaStoreBeta from './VanillaStoreBeta.vue'
-import VanillaStoreSelfInitialized from './VanillaStoreSelfInitialized.vue'
+import ClassStoreAlpha from './ClassStoreAlpha.vue'
+import ClassStoreBeta from './ClassStoreBeta.vue'
+import ClassStorePropsConstructed from './ClassStorePropsConstructed.vue'
+import ClassStoreSelfInitialized from './ClassStoreSelfInitialized.vue'
 
 defineOptions({
   name: 'GlobalState',
@@ -10,7 +11,8 @@ defineOptions({
 
 <template>
   <h2>Global state</h2>
-  <VanillaStoreAlpha />
-  <VanillaStoreBeta />
-  <VanillaStoreSelfInitialized />
+  <ClassStoreAlpha />
+  <ClassStoreBeta />
+  <ClassStoreSelfInitialized />
+  <ClassStorePropsConstructed :initial-count="300" initial-name="bruce" />
 </template>

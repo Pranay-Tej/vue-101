@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-export class VanillaVueStoreWithClass {
+export class ClassVueStore {
   #count = ref(0)
   #name = ref('')
 
@@ -26,6 +26,6 @@ export class VanillaVueStoreWithClass {
   }
 }
 
-export const vanillaStoreInstanceAlpha = new VanillaVueStoreWithClass(100, 'tony')
+export const classStoreInstanceAlpha = new ClassVueStore(100, 'tony')
 
-export const vanillaStoreInstanceBeta = new VanillaVueStoreWithClass(50, 'steve')
+export const classStoreInstanceBeta = new ClassVueStore(50, 'steve')
