@@ -1,8 +1,12 @@
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 export class ClassVueStore {
   #count = ref(0)
   #name = ref('')
+  public doubleCountComputed = computed(() => {
+    console.log('doubleCount recomputed')
+    return this.#count.value * 2
+  })
 
   constructor(count: number, name: string) {
     this.#count.value = count
@@ -12,6 +16,21 @@ export class ClassVueStore {
   get count() {
     return this.#count.value
   }
+
+  get doubleCountGet() {
+    // this will run EVERY-time/EVERYWHERE it's accessed
+    // NOT recommended, use computed() instead
+    console.log('doubleCountGet accessed')
+    return this.#count.value * 2
+  }
+
+  // set count(newValye: number) {
+  //   if (newValye === 25) {
+  //     console.error('Setting count to 25 is not allowed.')
+  //     return
+  //   }
+  //   this.#count.value = newValye
+  // }
 
   get name() {
     return this.#name.value

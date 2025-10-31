@@ -5,9 +5,10 @@ const props = defineProps<{ initialCount: number; initialName: string }>()
 
 const store = new ClassVueStore(props.initialCount, props.initialName)
 
+console.log('Store initialized with props:', store.name)
+
 const handleNameChange = (event: Event) => {
   const target = event.target as HTMLInputElement
-  console.log('New name:', target.value)
   store.setName(target.value)
 }
 </script>
@@ -17,6 +18,10 @@ const handleNameChange = (event: Event) => {
     <h2>Vanilla Store Props Constructed</h2>
     <div>
       <p>Count: {{ store.count }}</p>
+      <p>DoubleCountComputed: {{ store.doubleCountComputed }}</p>
+      <p>DoubleCountComputed: {{ store.doubleCountComputed }}</p>
+      <p>DoubleCountGet: {{ store.doubleCountGet }}</p>
+      <p>DoubleCountGet: {{ store.doubleCountGet }}</p>
       <button @click="store.increment()">Increment</button>
     </div>
     <div>

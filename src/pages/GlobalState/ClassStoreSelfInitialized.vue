@@ -5,8 +5,7 @@ const store = new ClassVueStore(200, 'peter')
 
 const handleNameChange = (event: Event) => {
   const target = event.target as HTMLInputElement
-  console.log('New name:', target.value)
-  store?.setName(target.value)
+  store.setName(target.value)
 }
 </script>
 
@@ -15,7 +14,7 @@ const handleNameChange = (event: Event) => {
     <h2>Vanilla Store Self Initialized</h2>
     <div>
       <p>Count: {{ store.count }}</p>
-      <button @click="store?.increment()">Increment</button>
+      <button @click="store.increment()">Increment</button>
     </div>
     <div>
       <p>{{ store.name }}</p>

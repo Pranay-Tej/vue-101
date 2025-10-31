@@ -3,7 +3,6 @@ import { classStoreInstanceBeta } from '@/stores/classVueStore'
 
 const handleNameChange = (event: Event) => {
   const target = event.target as HTMLInputElement
-  console.log('New name:', target.value)
   classStoreInstanceBeta.setName(target.value)
 }
 </script>
