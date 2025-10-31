@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import ClassStoreAlpha from './ClassStoreAlpha.vue'
 import ClassStoreBeta from './ClassStoreBeta.vue'
+import ClassStoreComputed from './ClassStoreComputed.vue'
 import ClassStorePropsConstructed from './ClassStorePropsConstructed.vue'
 import ClassStoreSelfInitialized from './ClassStoreSelfInitialized.vue'
 
@@ -15,4 +16,5 @@ defineOptions({
   <ClassStoreBeta />
   <ClassStoreSelfInitialized />
   <ClassStorePropsConstructed :initial-count="300" initial-name="bruce" />
+  <ClassStoreComputed />
 </template>

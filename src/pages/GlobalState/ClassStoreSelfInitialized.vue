@@ -11,7 +11,7 @@ const handleNameChange = (event: Event) => {
 
 <template>
   <div v-if="store">
-    <h2>Vanilla Store Self Initialized</h2>
+    <h2>Class Store Self Initialized</h2>
     <div>
       <p>Count: {{ store.count }}</p>
       <button @click="store.increment()">Increment</button>

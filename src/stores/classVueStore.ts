@@ -18,7 +18,7 @@ export class ClassVueStore {
   }
 
   get doubleCountGet() {
-    // this will run EVERY-time/EVERYWHERE it's accessed
+    // this will run EVERY-time/EVERYWHERE doubleCountGet or ANY other property (name) is accessed
     // NOT recommended, use computed() instead
     console.log('doubleCountGet accessed')
     return this.#count.value * 2

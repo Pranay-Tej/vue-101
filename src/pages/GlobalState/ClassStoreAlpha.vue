@@ -8,7 +8,7 @@ const handleNameChange = (event: Event) => {
 </script>
 
 <template>
-  <h2>Vanilla Store Alpha</h2>
+  <h2>Class Store Alpha</h2>
   <div>
     <p>Count: {{ classStoreInstanceAlpha.count }}</p>
     <button @click="classStoreInstanceAlpha.increment()">Increment</button>
